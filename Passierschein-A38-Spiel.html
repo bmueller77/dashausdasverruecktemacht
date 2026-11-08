@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Das Haus, das Verrückte macht – Passierschein A38</title>
+<style>
+:root{--bg:#efe2c6;--card:#fff9ef;--ink:#3a2c1a;--brown:#7c3a12;--brown-d:#5f2c0d;--bd:#e0cfa8;--mut:#8a7a5c;--ok:#2e7d32;--gold:#b8860b;--err:#b91c1c}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;margin:0;background:var(--bg);color:var(--ink);line-height:1.55}
+.top{background:var(--brown);color:#fff;padding:14px 0}
+.wrap{max-width:920px;margin:0 auto;padding:20px 16px 60px}
+.top .wrap{padding:0 16px}
+.tag{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:999px;font-size:.72rem;padding:2px 10px;margin-bottom:6px}
+h1{font-size:1.3rem;margin:.15rem 0}
+h2{font-size:1.1rem;margin:.2rem 0 .4rem}
+h3{font-size:.95rem;margin:16px 0 6px}
+.sub{color:#f0e0c8;font-size:.85rem;margin:0}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:20px;margin-top:18px;box-shadow:0 1px 3px rgba(60,40,10,.08)}
+.note{color:var(--mut);font-size:.9rem}
+.muted{color:var(--mut)}
+.screen{display:none}
+.screen.active{display:block}
+button{font:inherit;font-weight:600;border:0;border-radius:9px;padding:10px 16px;cursor:pointer}
+.b-pri{background:var(--brown);color:#fff}
+.b-pri:hover{background:var(--brown-d)}
+.b-sec{background:#e7d8b6;color:var(--ink)}
+.b-sec:hover{background:#dccaa0}
+.hidden{display:none!important}
+.startbtns{display:flex;gap:10px;margin:16px 0}
+.gbar{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.gbar .lbl,.grp .lbl{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:var(--mut)}
+.gbar>div>div{font-weight:700;font-size:1.05rem}
+.gbar #g-ort{font-size:1rem}
+.gbar button{margin-left:auto}
+.grid{display:flex;gap:16px;align-items:flex-start;margin-top:18px}
+.room{flex:2;margin-top:0}
+.side{flex:1;min-width:230px;margin-top:0}
+@media(max-width:660px){.grid{flex-direction:column}}
+.msg{background:#fbf3e0;border-left:4px solid var(--brown);padding:11px 13px;border-radius:6px;margin:12px 0;min-height:2.4em}
+.grp{margin-top:14px}
+.btnrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.b-act{background:#efe0bf;color:var(--ink);border:1px solid #e0cfa8}
+.b-act:hover{background:#e7d3aa}
+.b-go{background:#e9eef0;color:#22343a;border:1px solid #cfd8dc}
+.b-go:hover{background:#dbe6ea}
+.tasks{list-style:none;padding:0;margin:0}
+.tasks li{padding:4px 0;font-size:.92rem}
+.tasks li.done{color:var(--ok)}
+.inv{display:flex;flex-wrap:wrap;gap:6px}
+.chip{background:#f3e3bd;border:1px solid #e0cfa8;border-radius:999px;padding:3px 10px;font-size:.82rem}
+details.log{margin-top:14px}
+details.log summary{cursor:pointer;color:var(--mut);font-size:.85rem}
+#g-log{margin:8px 0 0;padding-left:18px;font-size:.85rem;color:#5b4a30}
+#g-log li{margin:3px 0}
+.hs{padding-left:22px;margin:6px 0}
+.hs li{margin:5px 0}
+table.sum{width:100%;border-collapse:collapse;font-size:.92rem;margin:12px 0}
+table.sum th,table.sum td{text-align:left;padding:6px 8px;border-bottom:1px solid #eaddc0}
+table.sum td{text-align:right;font-variant-numeric:tabular-nums}
+table.sum tr.tot th,table.sum tr.tot td{font-weight:800;font-size:1.05rem;border-top:2px solid var(--brown);border-bottom:0;color:var(--brown)}
+.namerow{display:flex;gap:8px;margin-top:6px}
+#e-name{flex:1;padding:9px 11px;border:1px solid var(--bd);border-radius:8px;font-size:.95rem}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<span class="tag">Rätselspiel · Asterix erobert Rom</span>
+<h1>Das Haus, das Verrückte macht</h1>
+<p class="sub">Die Jagd nach dem Passierschein A38</p>
+</div></header>
+<div class="wrap">
+
+<section id="screen-start" class="screen card active">
+<h2>Willkommen, tapferer Gallier!</h2>
+<p>Cäsars Beamte haben dich in das berüchtigte Amt geschickt. Dein Ziel: der <b>Passierschein A38</b>. Doch niemand sagt dir, was du dafür brauchst – das musst du selbst herausfinden.</p>
+<p class="note">Erkunde die Räume, lass dich abweisen, lies Schilder und frage an der Auskunft. Nur was du <b>wirklich erfährst</b>, landet in deiner Aufgabenliste (rechts). Die Bürokratie kämpft mit Gebührenmarken, Öffnungszeiten, Gegenzeichnungen und Fehldrucken zurück. Das Amt hat mehrere Etagen – du musst dich erst in den richtigen Stock begeben, um zu Schaltern, Fenstern und Zimmern zu gelangen. Wenig Schritte und Tempo bringen Punkte.</p>
+<div class="startbtns">
+<button class="b-pri" id="btn-new">Neues Spiel</button>
+<button class="b-sec hidden" id="btn-continue">Weiterspielen</button>
+</div>
+<h3>🏆 Highscore</h3>
+<ol id="hs-start" class="hs"></ol>
+</section>
+
+<section id="screen-game" class="screen">
+<div class="card gbar">
+<div><span class="lbl">Ort</span><div id="g-ort">—</div></div>
+<div><span class="lbl">Schritte</span><div id="g-steps">0</div></div>
+<div><span class="lbl">Zeit</span><div id="g-timer">00:00</div></div>
+<button class="b-sec" id="g-reset">Neu starten</button>
+</div>
+<div class="grid">
+<div class="card room">
+<h2 id="g-roomname">—</h2>
+<p id="g-desc"></p>
+<div class="msg" id="g-msg"></div>
+<div class="grp"><span class="lbl">Aktionen</span><div id="g-actions" class="btnrow"></div></div>
+<div class="grp"><span class="lbl">Wege</span><div id="g-moves" class="btnrow"></div></div>
+<details class="log"><summary>Verlauf anzeigen</summary><ul id="g-log"></ul></details>
+</div>
+<aside class="card side">
+<h3 id="tasks-h">Aufgaben</h3>
+<ul id="g-tasks" class="tasks"></ul>
+<h3>Inventar</h3>
+<div id="g-inv" class="inv"></div>
+</aside>
+</div>
+</section>
+
+<section id="screen-end" class="screen">
+<div class="card">
+<h2 id="e-title">Geschafft!</h2>
+<p id="e-text"></p>
+<table class="sum" id="e-score"></table>
+<div id="e-nameblock">
+<label for="e-name">Dein Name für den Highscore:</label>
+<div class="namerow"><input id="e-name" maxlength="24" placeholder="Asterix"><button class="b-pri" id="btn-save">Eintragen</button></div>
+</div>
+<h3>🏆 Highscore</h3>
+<ol id="hs-end" class="hs"></ol>
+<button class="b-sec" id="btn-again" style="margin-top:14px">Nochmal spielen</button>
+</div>
+</section>
+
+</div>
+<script>
+var SAVE="a38_save3", HS="a38_hs3";
+var store=(function(){
+  var ok=true; try{localStorage.setItem("__t","1");localStorage.removeItem("__t");}catch(e){ok=false;}
+  var mem={};
+  return {
+    get:function(k){try{return ok?localStorage.getItem(k):(k in mem?mem[k]:null);}catch(e){return (k in mem?mem[k]:null);}},
+    set:function(k,v){try{if(ok)localStorage.setItem(k,v);else mem[k]=v;}catch(e){mem[k]=v;}},
+    del:function(k){try{if(ok)localStorage.removeItem(k);else delete mem[k];}catch(e){delete mem[k];}}
+  };
+})();
+
+var ITEMS={wartemarke:"Wartemarke",muenzen:"Passende Münzen",gebuehr:"Gebührenmarke",schluessel:"Aufzugsschlüssel",formB:"Formular B",form27:"Formular 27B/6",gruen:"Grünes Formular",stempel:"Rundstempel",a38:"Passierschein A38"};
+var OBJS=[
+ {key:"wartemarke",title:"Wartemarke ziehen",loc:"Eingangshalle (EG)"},
+ {key:"muenzen",title:"Passende Münzen besorgen",loc:"Kantine, 2. OG (Wechselautomat)"},
+ {key:"gebuehr",title:"Gebührenmarke kaufen",loc:"Kasse (EG)"},
+ {key:"schluessel",title:"Aufzugsschlüssel besorgen",loc:"Keller (Hausmeister)"},
+ {key:"formB",title:"Formular B holen",loc:"Fenster 12 (1. OG)"},
+ {key:"form27",title:"Formular 27B/6 gegenzeichnen lassen",loc:"Schalter 2 (2. OG) → Schalter 1 (1. OG)"},
+ {key:"gruen",title:"Grünes Formular holen",loc:"Zimmer 4004 (3. OG)"},
+ {key:"stempel",title:"Rundstempel holen",loc:"Schalter 1 (1. OG)"},
+ {key:"a38",title:"Passierschein A38 beantragen",loc:"Hauptschalter (EG)"}
+];
+var ROOMS={
+ flur_kg:{name:"Flur – Keller",emoji:"🕳️",flur:true,desc:"Kühl, feucht, Kabelgewirr. Hier unten hausen Heizung und Hausmeister.",exits:[{to:"keller",label:"→ Hausmeisterei"},{to:"flur_eg",label:"⬆️ Treppe: Erdgeschoss"}]},
+ flur_eg:{name:"Flur – Erdgeschoss",emoji:"🏛️",flur:true,desc:"Die große Halle. Wegweiser deuten auf Eingang/Wartemarke, Kasse und Hauptschalter. Treppen führen hinab und hinauf.",exits:[{to:"eingang",label:"→ Eingangshalle"},{to:"kasse",label:"→ Kasse"},{to:"hauptschalter",label:"→ Hauptschalter"},{to:"flur_kg",label:"⬇️ Treppe: Keller"},{to:"flur_1",label:"⬆️ Treppe: 1. OG"}]},
+ flur_1:{name:"Flur – 1. Obergeschoss",emoji:"🪜",flur:true,desc:"Ein langer Gang. Türschilder: Schalter 1 (Auskunft & Beglaubigung) und Fenster 12.",exits:[{to:"schalter1",label:"→ Schalter 1"},{to:"fenster12",label:"→ Fenster 12"},{to:"flur_eg",label:"⬇️ Treppe: Erdgeschoss"},{to:"flur_2",label:"⬆️ Treppe: 2. OG"}]},
+ flur_2:{name:"Flur – 2. Obergeschoss",emoji:"🪜",flur:true,desc:"Neonlicht und Linoleum. Hier liegen Schalter 2 (Anträge) und die Kantine. Am Ende des Gangs der Aufzug in den 3. Stock.",exits:[{to:"schalter2",label:"→ Schalter 2"},{to:"kantine",label:"→ Kantine"},{to:"flur_1",label:"⬇️ Treppe: 1. OG"},{to:"flur_3",label:"🛗 Aufzug: 3. OG"}]},
+ flur_3:{name:"Flur – 3. Obergeschoss",emoji:"🚧",flur:true,gate:{item:"schluessel",msg:"Der Aufzug ist verschlossen und die Treppe wegen Renovierung gesperrt. Am Schild: „Schlüssel beim Hausmeister im Keller.“"},desc:"Ganz oben, hinter einer Topfpflanze: Zimmer 4004.",exits:[{to:"stock3",label:"→ Zimmer 4004"},{to:"flur_2",label:"🛗 Aufzug: 2. OG"}]},
+ keller:{name:"Keller – Hausmeisterei",emoji:"🔧",desc:"Es riecht nach Wein und Bohnerwachs. Der Hausmeister mustert dich misstrauisch.",exits:[{to:"flur_kg",label:"← zurück auf den Flur"}],actions:["hol_schluessel"]},
+ eingang:{name:"Eingangshalle (EG)",emoji:"🎫",desc:"Marmor, Zugluft und ein Schild: „Bitte Wartemarke ziehen.“",exits:[{to:"flur_eg",label:"← zurück in die Halle"}],actions:["ziehe_wartemarke"]},
+ kasse:{name:"Kasse (EG)",emoji:"🪙",desc:"Ein Schalter mit Panzerglas. „Zahlungen nur passend.“",exits:[{to:"flur_eg",label:"← zurück in die Halle"}],actions:["hol_gebuehr"]},
+ hauptschalter:{name:"Hauptschalter (EG)",emoji:"📜",desc:"Der Verwaltungschef persönlich, umringt von Stempeln und einem Berg unbearbeiteter Anträge.",exits:[{to:"flur_eg",label:"← zurück in die Halle"}],actions:["beantrage_a38"]},
+ schalter1:{name:"Schalter 1 – Auskunft & Beglaubigung (1. OG)",emoji:"🗄️",desc:"Ein Beamter mit Ärmelschonern. Auskünfte, Gegenzeichnungen und – angeblich – der Rundstempel.",exits:[{to:"flur_1",label:"← zurück auf den Flur"}],actions:["auskunft","gegenzeichnen","hol_stempel"]},
+ fenster12:{name:"Fenster 12 (1. OG)",emoji:"🪟",desc:"Ein winziges Fenster mit dem Aushang: „Geöffnet 9:00–9:15 Uhr (außer bei Vollmond).“",exits:[{to:"flur_1",label:"← zurück auf den Flur"}],actions:["hol_formB"]},
+ schalter2:{name:"Schalter 2 – Anträge (2. OG)",emoji:"📇",desc:"Ein Stapel Formulare, so hoch wie Obelix. Zuständig für Formular 27B/6.",exits:[{to:"flur_2",label:"← zurück auf den Flur"}],actions:["hol_form27"]},
+ kantine:{name:"Kantine (2. OG)",emoji:"☕",desc:"Ein defekter Kaffeeautomat, ein Wechselautomat und ein Beamter in ewiger Pause.",exits:[{to:"flur_2",label:"← zurück auf den Flur"}],actions:["wechseln","kaffee"]},
+ stock3:{name:"Zimmer 4004 (3. OG)",emoji:"🚪",desc:"Ganz hinten im Korridor, hinter der Topfpflanze.",exits:[{to:"flur_3",label:"← zurück auf den Flur"}],actions:["hol_gruen"]}
+};
+var ALABEL={
+ ziehe_wartemarke:"🎟️ Wartemarke ziehen",
+ auskunft:"❓ Auskunft verlangen",
+ gegenzeichnen:"✍️ Formular gegenzeichnen lassen",
+ hol_stempel:"🔖 Rundstempel verlangen",
+ hol_form27:"🧾 Formular 27B/6 verlangen",
+ hol_formB:"📄 Formular B verlangen",
+ hol_gebuehr:"🎫 Gebührenmarke kaufen",
+ hol_schluessel:"🔑 Aufzugsschlüssel erbitten",
+ hol_gruen:"🟢 Grünes Formular verlangen",
+ wechseln:"🪙 Geld wechseln",
+ kaffee:"☕ Kaffee ziehen",
+ beantrage_a38:"📜 Passierschein A38 beantragen"
+};
+
+var state=null, timerId=null;
+
+function freshState(){
+ var st={room:"eingang",steps:0,inv:{},known:{},log:[],f12:0,gruenTry:0,form27_signed:false,failCount:0,sawUnknown:false,finished:false,mode:null,startTs:Date.now(),_saved:false};
+ st.known["need_wartemarke"]=1; st.known["loc_wartemarke"]=1; st.known["need_a38"]=1; st.known["loc_a38"]=1;
+ st.msg="Willkommen im Haus, das Verrückte macht. Du willst den Passierschein A38 – aber was du dafür brauchst, verrät dir keiner freiwillig. Fang an zu suchen.";
+ return st;
+}
+function el(s){return document.querySelector(s);}
+function fmt(sec){var m=Math.floor(sec/60),s=sec%60;return (m<10?"0":"")+m+":"+(s<10?"0":"")+s;}
+function show(name){["start","game","end"].forEach(function(n){var e=document.getElementById("screen-"+n);if(e)e.classList.toggle("active",n===name);});}
+function setMsg(m){state.msg=m;pushLog(m);}
+function pushLog(m){state.log.unshift(m);if(state.log.length>12)state.log=state.log.slice(0,12);}
+function toast(m){pushLog("✅ "+m);}
+function fail(){state.failCount++;state.sawUnknown=true;}
+function know(k){if(!state.known[k]){state.known[k]=1;return true;}return false;}
+function obtain(item,msg){state.inv[item]=true;state.steps++;know("need_"+item);know("loc_"+item);setMsg(msg);toast("Erhalten: "+(ITEMS[item]||item));}
+
+function saveGame(){if(state.finished)return;state.savedAt=Date.now();try{store.set(SAVE,JSON.stringify(state));}catch(e){}}
+function loadGame(){try{var r=store.get(SAVE);return r?JSON.parse(r):null;}catch(e){return null;}}
+function loadHS(){try{var r=store.get(HS);var a=r?JSON.parse(r):[];return Array.isArray(a)?a:[];}catch(e){return [];}}
+function saveHS(entry){var a=loadHS();a.push(entry);a.sort(function(x,y){return y.score-x.score;});a=a.slice(0,10);try{store.set(HS,JSON.stringify(a));}catch(e){}}
+function esc(s){return String(s).replace(/[&<>\"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c];});}
+function renderHS(id){var a=loadHS();var e=document.getElementById(id);if(!e)return;e.innerHTML=a.length?a.map(function(x){return "<li><b>"+esc(x.name)+"</b> — "+x.score+" Pkt <span class=\"muted\">("+x.steps+" Schritte, "+fmt(x.sec)+")</span></li>";}).join(""):"<li class=\"muted\">Noch keine Einträge – sei der erste Gallier!</li>";}
+
+function isObjDone(key){if(key==="form27")return !!state.form27_signed;if(key==="a38")return !!state.inv.a38;return !!state.inv[key];}
+function showAction(a){
+ var i=state.inv;
+ if(a==="ziehe_wartemarke")return !i.wartemarke;
+ if(a==="wechseln")return !i.muenzen;
+ if(a==="hol_gebuehr")return !i.gebuehr;
+ if(a==="hol_schluessel")return !i.schluessel;
+ if(a==="hol_formB")return !i.formB;
+ if(a==="hol_form27")return !i.form27;
+ if(a==="gegenzeichnen")return i.form27 && !state.form27_signed;
+ if(a==="hol_gruen")return !i.gruen;
+ if(a==="hol_stempel")return !i.stempel;
+ return true;
+}
+
+function move(to){
+ var cur=ROOMS[state.room];
+ var edge=(cur.exits||[]).filter(function(x){return x.to===to;})[0];
+ if(!edge){setMsg("Von hier kommst du dort nicht direkt hin – erst in den richtigen Stock!");render();return;}
+ var r=ROOMS[to];
+ if(r.gate&&!state.inv[r.gate.item]){setMsg(r.gate.msg);know("need_schluessel");know("loc_schluessel");fail();saveGame();render();return;}
+ state.room=to; state.steps++; setMsg("Du gehst zu: "+r.emoji+" "+r.name+".");
+ saveGame(); render();
+}
+
+function runAction(id){
+ var i=state.inv;
+ switch(id){
+  case "ziehe_wartemarke":
+    if(i.wartemarke){setMsg("Du hast bereits Wartemarke Nr. 4.294.967.296.");break;}
+    obtain("wartemarke","Ratsch! Du ziehst <b>Wartemarke Nr. 4.294.967.296</b>. Nur noch gut vier Milliarden vor dir.");break;
+  case "wechseln":
+    if(i.muenzen){setMsg("Passende Münzen hast du bereits.");break;}
+    obtain("muenzen","Klack-klack – der Wechselautomat spuckt <b>passende Sesterzen</b> aus (drei verbogen, aber es zählt).");break;
+  case "hol_gebuehr":
+    if(i.gebuehr){setMsg("Eine Gebührenmarke hast du schon.");break;}
+    if(!i.muenzen){setMsg("Kassierer: „Nur <b>passend</b>! Der Automat gibt kein Wechselgeld. Wechseln können Sie in der <b>Kantine</b>.\"");know("need_muenzen");know("loc_muenzen");know("need_gebuehr");know("loc_gebuehr");fail();break;}
+    obtain("gebuehr","Gegen ein kleines Vermögen an Sesterzen erhältst du eine amtliche <b>Gebührenmarke</b>.");break;
+  case "hol_schluessel":
+    if(i.schluessel){setMsg("Den Aufzugsschlüssel hast du schon.");break;}
+    if(!i.wartemarke){setMsg("Hausmeister: „Ohne Wartemarke kein Schlüssel. Vorschrift ist Vorschrift.\"");know("need_wartemarke");fail();break;}
+    obtain("schluessel","Der Hausmeister brummt und drückt dir den <b>Aufzugsschlüssel</b> in die Hand.");break;
+  case "hol_formB":
+    if(i.formB){setMsg("Formular B hast du bereits.");break;}
+    if(!i.wartemarke){setMsg("Beamter: „Erst eine Wartemarke ziehen! Nächster!\"");know("need_wartemarke");fail();break;}
+    if(!i.gebuehr){setMsg("Beamter: „Formular B? Nur gegen <b>Gebührenmarke</b>! Die gibt es an der <b>Kasse</b>.\"");know("need_gebuehr");know("loc_gebuehr");fail();break;}
+    if(!state.f12){state.f12=1;setMsg("Klappe zu: „Fenster 12 öffnet 9:00–9:15 Uhr. Es ist 9:16. Kommen Sie morgen – oder versuchen Sie es gleich nochmal.\"");fail();break;}
+    obtain("formB","Beim zweiten Anlauf klappt es: <b>Formular B</b> (in dreifacher Ausfertigung).");break;
+  case "hol_form27":
+    if(i.form27){setMsg("Formular 27B/6 hast du bereits.");break;}
+    if(!i.gebuehr){setMsg("Beamter: „Formular 27B/6? Nur gegen <b>Gebührenmarke</b> (Kasse).\"");know("need_gebuehr");know("loc_gebuehr");fail();break;}
+    obtain("form27","Du erhältst <b>Formular 27B/6</b>. Beamter: „Ungültig ohne <b>Gegenzeichnung von Schalter 1</b>. Nächster!\"");know("need_form27");know("loc_form27");break;
+  case "gegenzeichnen":
+    if(!i.form27){setMsg("Du hast nichts, das gegenzuzeichnen wäre.");break;}
+    if(state.form27_signed){setMsg("Formular 27B/6 ist bereits gegengezeichnet.");break;}
+    state.form27_signed=true;state.steps++;setMsg("Schalter 1 stempelt widerwillig gegen: <b>Formular 27B/6 ist nun gegengezeichnet</b>.");toast("Erledigt: Gegenzeichnung");break;
+  case "hol_gruen":
+    if(i.gruen){setMsg("Das grüne Formular hast du schon.");break;}
+    if(!i.formB){setMsg("Sachbearbeiter: „Das grüne Formular? Nur gegen Vorlage von <b>Formular B</b>.\"");know("need_formB");know("loc_formB");fail();break;}
+    if(!state.gruenTry){state.gruenTry=1;setMsg("Fehldruck! Man reicht dir versehentlich den <b>rosa Durchschlag</b> statt des Originals. „Nochmal anstellen.\"");fail();break;}
+    obtain("gruen","Endlich: das echte <b>grüne Formular</b> (mit rosa Durchschlag und lila Zweitdurchschlag).");break;
+  case "hol_stempel":
+    if(i.stempel){setMsg("Der Rundstempel ist bereits dein.");break;}
+    var miss=[];
+    if(!i.gruen){miss.push("grünes Formular");know("need_gruen");}
+    if(!state.form27_signed){miss.push("gegengezeichnetes Formular 27B/6");know("need_form27");know("loc_form27");}
+    if(miss.length){setMsg("Beamter: „Rundstempel? Erst brauche ich: <b>"+miss.join(" und ")+"</b>. Nächster!\"");fail();break;}
+    obtain("stempel","*KLONK* – der begehrte <b>Rundstempel</b> ziert nun deine Unterlagen.");break;
+  case "auskunft":{
+    var pend=OBJS.filter(function(o){return state.known["need_"+o.key] && !state.known["loc_"+o.key];});
+    if(pend.length){var o=pend[0];state.known["loc_"+o.key]=1;setMsg("Auskunft (nach langem Seufzen): „"+o.title+"? Zuständig ist: <b>"+o.loc+"</b>.\"");}
+    else{var sn=["Auskunft: „Dafür müssen Sie einen Antrag stellen.\"","Auskunft: „Der zuständige Kollege ist in der Mittagspause.\"","Auskunft: „Haben Sie schon eine Wartemarke gezogen?\"","Auskunft: „Da bin ich überfragt. Fragen Sie den Verwaltungschef – oder lassen Sie sich erst abweisen.\""];setMsg(sn[state.steps%sn.length]);}
+    break;}
+  case "kaffee":
+    setMsg("Der Automat schluckt deine Sesterze und spuckt lauwarmes Wasser aus. An der Pinnwand hängt ein vergilbter Zettel: „Bei Fragen zur Zuständigkeit wenden Sie sich an die Auskunft (Schalter 1).“");break;
+  case "beantrage_a38":{
+    var m2=[];
+    if(!i.formB){m2.push("Formular B");know("need_formB");}
+    if(!i.gruen){m2.push("grünes Formular");know("need_gruen");}
+    if(!i.stempel){m2.push("Rundstempel");know("need_stempel");}
+    if(m2.length){setMsg("Verwaltungschef blättert streng: „So wird das nichts. Es fehlt: <b>"+m2.join(", ")+"</b>. Wo Sie das herkriegen? Nicht mein Ressort. Nächster!\"");fail();break;}
+    i.a38=true;state.steps++;win("regulaer");return;
+  }
+ }
+ saveGame(); render();
+}
+
+function scoreOf(s){
+ var sec=Math.max(0,Math.round((s.endTs-s.startTs)/1000));
+ var base=1000, timeBonus=Math.max(0,700-sec), stepPen=s.steps*4, modeBonus=300;
+ var total=Math.max(0,base+timeBonus-stepPen+modeBonus);
+ return {sec:sec,base:base,timeBonus:timeBonus,stepPen:stepPen,modeBonus:modeBonus,total:total};
+}
+function win(mode){state.finished=true;state.mode=mode;state.endTs=Date.now();state._saved=false;store.del(SAVE);stopTimer();showEnd();}
+function showEnd(){
+ var s=scoreOf(state);
+ el("#e-title").textContent="🎉 Passierschein A38 erhalten!";
+ el("#e-text").innerHTML="Nach Gebührenmarken, Gegenzeichnungen, Fehldrucken und gefühlt hundert Schaltern hält Asterix den <b>Passierschein A38</b> in Händen. Miraculix ist beeindruckt, Obelix hat vier Wildschweine verspeist.";
+ el("#e-score").innerHTML=
+   "<tr><th>Grundprämie</th><td>"+s.base+"</td></tr>"+
+   "<tr><th>Zeitbonus ("+fmt(s.sec)+")</th><td>+"+s.timeBonus+"</td></tr>"+
+   "<tr><th>Schritte ("+state.steps+")</th><td>-"+s.stepPen+"</td></tr>"+
+   "<tr><th>Ordnungsbonus</th><td>+"+s.modeBonus+"</td></tr>"+
+   "<tr class=\"tot\"><th>Gesamtpunktzahl</th><td>"+s.total+"</td></tr>";
+ el("#e-nameblock").style.display="";el("#e-name").disabled=false;el("#btn-save").disabled=false;
+ renderHS("hs-end");show("end");
+}
+function submitName(name){
+ if(state._saved)return;
+ var s=scoreOf(state);
+ var entry={name:(name&&name.trim())?name.trim().slice(0,24):"Namenloser Gallier",score:s.total,steps:state.steps,sec:s.sec,mode:state.mode,date:new Date().toISOString().slice(0,10)};
+ saveHS(entry);state._saved=true;el("#e-name").disabled=true;el("#btn-save").disabled=true;renderHS("hs-end");
+}
+
+function renderTasks(){
+ var K=state.known;
+ var rows=OBJS.filter(function(o){return K["need_"+o.key];}).map(function(o){
+   var done=isObjDone(o.key);
+   var loc=K["loc_"+o.key]?("<span class=\"muted\">("+o.loc+")</span>"):"<span class=\"muted\">(❓ Bezugsort noch unbekannt)</span>";
+   return "<li class=\""+(done?"done":"")+"\">"+(done?"✓":"○")+" "+o.title+" "+loc+"</li>";
+ });
+ var hasUnknown=OBJS.some(function(o){return !K["need_"+o.key];});
+ if(state.sawUnknown && hasUnknown){rows.push("<li class=\"muted\">❓ Es gibt Hinweise auf weitere Anforderungen …</li>");}
+ el("#g-tasks").innerHTML=rows.join("");
+ var cnt=OBJS.filter(function(o){return K["need_"+o.key];}).length;
+ el("#tasks-h").textContent="Aufgaben (bekannt: "+cnt+")";
+}
+function render(){
+ var R=ROOMS[state.room];
+ el("#g-ort").textContent=R.emoji+" "+R.name;
+ el("#g-steps").textContent=state.steps;
+ el("#g-roomname").textContent=R.emoji+" "+R.name;
+ el("#g-desc").textContent=R.desc;
+ el("#g-msg").innerHTML=state.msg||"";
+ var ah="";(R.actions||[]).forEach(function(a){if(showAction(a))ah+="<button class=\"b-act\" data-act=\""+a+"\">"+ALABEL[a]+"</button>";});
+ el("#g-actions").innerHTML=ah||"<span class=\"muted\">— hier gibt es nichts zu erledigen —</span>";
+ var mh="";R.exits.forEach(function(x){var tgt=ROOMS[x.to];var locked=(tgt.gate&&!state.inv[tgt.gate.item])?" 🔒":"";mh+="<button class='b-go' data-go='"+x.to+"'>"+x.label+locked+"</button>";});
+ el("#g-moves").innerHTML=mh;
+ renderTasks();
+ var inv=Object.keys(ITEMS).filter(function(k){return state.inv[k];});
+ el("#g-inv").innerHTML=inv.length?inv.map(function(k){var lab=ITEMS[k];if(k==="form27")lab+=(state.form27_signed?" ✓":" (ungez.)");return "<span class=\"chip\">"+lab+"</span>";}).join(""):"<span class=\"muted\">leer</span>";
+ el("#g-log").innerHTML=state.log.map(function(m){return "<li>"+m+"</li>";}).join("");
+}
+
+function startTimer(){stopTimer();timerId=setInterval(tick,1000);tick();}
+function stopTimer(){if(timerId){clearInterval(timerId);timerId=null;}}
+function tick(){if(!state||state.finished)return;var sec=Math.max(0,Math.round((Date.now()-state.startTs)/1000));var e=el("#g-timer");if(e)e.textContent=fmt(sec);}
+
+function newGame(){state=freshState();startTimer();saveGame();show("game");render();}
+function resume(){var s=loadGame();if(!s||s.finished){newGame();return;}if(s.savedAt)s.startTs+=(Date.now()-s.savedAt);state=s;startTimer();show("game");render();}
+function initStart(){renderHS("hs-start");var s=loadGame();el("#btn-continue").classList.toggle("hidden",!(s&&!s.finished));show("start");}
+
+window.addEventListener("DOMContentLoaded",function(){
+ el("#btn-new").addEventListener("click",newGame);
+ el("#btn-continue").addEventListener("click",resume);
+ el("#btn-again").addEventListener("click",newGame);
+ el("#btn-save").addEventListener("click",function(){submitName(el("#e-name").value);});
+ el("#g-reset").addEventListener("click",function(){if(window.confirm("Neu starten? Der aktuelle Fortschritt geht verloren.")){store.del(SAVE);newGame();}});
+ el("#screen-game").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;if(b.dataset.go){move(b.dataset.go);}else if(b.dataset.act){runAction(b.dataset.act);}});
+ initStart();
+});
+
+window.GAME={get state(){return state;},newGame:newGame,resume:resume,move:move,act:runAction,scoreOf:scoreOf,loadHS:loadHS,submitName:submitName,store:store,SAVE:SAVE,HS:HS,loadGame:loadGame,tasksHTML:function(){return el("#g-tasks").innerHTML;}};
+</script>
+</body>
+</html>
